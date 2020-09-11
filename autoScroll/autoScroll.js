@@ -40,7 +40,7 @@
             // intId = setInterval(start(1+10), 1000);
 
             
-            console.log(speed.value, typeof speed.value);
+            // console.log(speed.value, typeof speed.value);
         }
     });
 
@@ -63,7 +63,7 @@
             //seems to round the 1 down to 0, and does nothing
             // window.scrollBy(0, pxps);
 
-            console.log('scroll y', window.scrollY);
+            // console.log('scroll y', window.scrollY);
         };
     }
 
@@ -78,7 +78,7 @@
         //parse the input into a number, clear interval (for #2 above),
         //and commence with new interval        
         let px = parseInt(speed.value)/100;
-        console.log(px);
+        // console.log(px);
         clearInterval(intId);
         incrementScroll(px)();
         intId = setInterval(incrementScroll(px), 10);
@@ -94,7 +94,7 @@
         if (scrolling) {
             commenceScrolling();
         }
-        console.log('updated speed');
+        // console.log('updated speed');
     });
 
     //action listener for stop button
@@ -104,7 +104,7 @@
         scrolling = false;
     });
 
-    const top = document.getElementById('top');
+    const top = document.getElementById('topBtn');
     top.addEventListener('click', () =>{
         clearInterval(intId);
         scrolling = false;
