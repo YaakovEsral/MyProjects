@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+#messageBox {
+        background-color: #87c4dc;
+        padding: 1em;
+        box-sizing: border-box;
+        position: absolute;
+        height: 85px;
+        top: 30%;
+        left: 50%;
+        text-align: center;
+}
+
+#messageBox span {
+        overflow: auto;
+        height: 100%;
+        display: inline-block;
+        font-family: 'Noto Sans JP', sans-serif;
+}        

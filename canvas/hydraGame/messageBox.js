@@ -4,13 +4,14 @@ window.pcs.messageBox = (function () {
 
     //variables for sizing and positioning
     const width = 300;
-    const height = 150;
+    const height = 76;
 
 
     //function to show a message box
     function show(msg) {
         //message box with a span element for the message
         const messageBox = document.createElement('div');
+        messageBox.id = 'messageBox';
         const span = document.createElement('span');
         messageBox.appendChild(span);
         span.innerHTML = msg;
@@ -18,26 +19,17 @@ window.pcs.messageBox = (function () {
 
         document.body.appendChild(messageBox);
 
+        const link = document.createElement('link');
+        link.setAttribute('rel', 'stylesheet');
+        link.setAttribute('type', 'text/css');
+        link.setAttribute('href', 'messageBox.css');
+        document.head.appendChild(link);
 
-        //style for the message box
-        messageBox.style.backgroundColor = '#29c715';
+        //style for the message box - needs to be done here because it uses variables
         messageBox.style.width = `${width}px`;
-        messageBox.style.height = `${height}px`;
-        messageBox.style.padding = '1em';
-        messageBox.style.paddingBottom = '38px';
-        messageBox.style.marginLeft = `-${width/2}px`;
-        messageBox.style.marginTop = `-${height/2}px`;
-        messageBox.style.boxSizing = 'border-box';
-        messageBox.style.position = 'absolute';
-        messageBox.style.top = '50%';
-        messageBox.style.left = '50%';
-        messageBox.style.border = '1px solid black';
-
-        //style for the span element
-        span.style.overflow = 'auto';
-        span.style.height = "100%";
-        span.style.display = 'inline-block';
-
+        messageBox.style.marginLeft = `-${width / 2}px`;
+        messageBox.style.marginTop = `-${height / 2}px`;
+        
         setTimeout(() =>{
             messageBox.remove();
         }, 2000);
