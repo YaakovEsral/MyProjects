@@ -11,6 +11,7 @@
     <style>
         body {
             background-color: #e0eaf9;
+            margin-bottom: 77px;
         }
 
         button {
@@ -25,13 +26,26 @@
 
         #buttons {
             position: fixed;
-            top: 0;
-            left: 15%;
             text-align: center;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 300px;
         }
 
         #topBtn {
             margin-top: 7px;
+        }
+
+        #tooltip {
+            display: inline-block;
+            background-color: white;
+            padding: .5em;
+            font-size: 20px;
+            border-radius: 5px;
+            border: #0a2454 1px solid;
+            width: 23px;
         }
 
         #heading {
@@ -61,7 +75,7 @@
             font-family: "IBM Plex Mono", "Courier 10 Pitch", Courier, monospace;
             font-size: 17px;
             line-height: 1.6;
-            margin-bottom: 1.6em;
+            /* margin-bottom: 1.6em; */
             max-width: 100%;
             overflow: auto;
             padding: 1.6em;
@@ -74,128 +88,59 @@
 <body>
     <div id="buttons">
         <button id="scroll">Scroll</button>
-        <input id="speed" type="number" min="1" max="10" value="7">
+        <input id="speed" type="range" min="1" max="30" value="15">
         <button id="stop">Stop</button>
         <br>
+        <div id="tooltip">15</div>
         <button id="topBtn">Back to Top</button>
     </div>
     <div id="heading">
-        <h1>Vezakeini</h1>
-        <h3>Baruch Levine and Benny Friedman</h3>
+        <h1>Ana Hashem</h1>
+        <h3>Shlomo Carlebach</h3>
     </div>
 
 
     <main>
         <pre>
-Original key: C#m-Dbm
+Capo 3+
+Em     Am  Em     D
+Ana Hashem ana Hashem
+D   C  D    Em
+Ki ani avdecha
+Em     Am  Em     D
+Ana Hashem ana Hashem
+Am  D       Em
+Ki ani avdecha
 
-Capo 3
-       G       D     C
-As I stand in candlelight
-         Em     D       C
-With my hands upon my eyes
-           Am     E       Am
-There’s a passion in my prayers
-C                D
-That rends the skies
-                           G      D
-For a mother’s tears can shatter
-                 Em            C
-Every gate that bars the way
-         Am          Bm
-All the heavens will echo 
-       C                  B
-Those words that mothers say
+Em     Am  Em     D
+Ana Hashem ana Hashem
+D   C  D    Em
+Ki ani avdecha
+Em     Am  Em     D
+Ana Hashem ana Hashem
+Am  D       Em
+Ki ani avdecha
 
-Chorus:
-     Em         D
-Vezakeini vezakeini
-          Bm             C
-Take my children by the hand
-           Am              D
-Help them walk along Your way
-          B
-May they never go astray
-          Em            D
-May they know You as I know You
-      Bm              C
-Oh Hashem, accept my plea
-          Am                  D
-Give me children who’ll give nachas
-Bm      C  D  Em
-Vezakeini
+ Em                 D
+Ani avdicha ben amasecha
+  D                 Em
+Ani avdicha ben amasecha
+ Em                 D
+Ani avdicha ben amasecha
+Am        D      Em
+Pitachta limoseirai
 
-       G       D     C
-As I stand in candlelight
-          Em      D         C
-While my home is dark and still
-           Am      E       Am
-There’s a void inside my heart
-C          D
-I long to fill
-                G       D
-Will I ever be mother
-                    Em           C
-Will that blessing come my way
-        Am           Bm
-Will I stand by the candles
-       C             B
-With gratitude and pray
+Em                 D
+Ani avdicha ben amasecha
+  D                 Em
+Ani avdicha ben amasecha
+ Em                 D
+Ani avdicha ben amasecha
+Am        D      Em
+Pitachta limoseirai
 
-Chorus:
-      Em         D
-Vezakeini vezakeini
-          Bm             C
-Take my children by the hand
-           Am              D
-Help them walk along Your way
-          B
-May they never go astray
-          Em            D
-May they know You as I know You
-       Bm              C
-Oh Hashem, accept my plea
-          Am                  D
-Give me children who’ll give nachas
-Bm      C  D  Em
-Vezakeini
-
-
-     Em         D
-Vezakeini vezakeini
-       Bm            C
-Yeder einer vil dos zehn
-       Am            D
-Beten mir bei dir atzind
-        B
-Nachas fun a yiddish/yedeh kind
-        Em       D
-Zarah chaya vikayama
-      Bm              C
-Un milazt a trer dehrtzu
-          Am             D
-Yeder mishpacha mit di brocha
-Bm      C   D  Em
-Vezakeini
-
-
-     Em         D
-Vezakeini vezakeini
-          Bm             C
-Take our children by the hand
-           Am              D
-Help them walk along Your way
-          B
-May they never go astray
-          Em            D
-May they know You as I know You
-       Bm              C
-Oh Hashem, accept my plea
-          Am                  D
-Give us children who’ll give nachas
-Bm      C  D  Em
-Vezakeini
-</pre>
+Note: This song requires a long voice range. 
+Use the capo as you see fit.</pre>
     </main>
     <script src="autoScroll.js"></script>
 </body>

@@ -11,16 +11,18 @@
     //saving the input field into variable const speed
     const speed = document.getElementById('speed');
 
+    const tooltip = document.getElementById('tooltip');
+
     //listener for when user clicks scroll button
     scroll.addEventListener('click', () => {
         if (!scrolling) { //don't allow multiple clicks
 
-        //call scrolling method which takes care of everything
-        commenceScrolling();
+            //call scrolling method which takes care of everything
+            commenceScrolling();
 
-        scrolling = true; //update status so we don't process any more clicks for this button
-            
-        //v2
+            scrolling = true; //update status so we don't process any more clicks for this button
+
+            //v2
             //convert the input value from string to number
             // let px = parseInt(speed.value);
             // start(px)();
@@ -39,7 +41,7 @@
             // start(1)();
             // intId = setInterval(start(1+10), 1000);
 
-            
+
             // console.log(speed.value, typeof speed.value);
         }
     });
@@ -77,7 +79,7 @@
     function commenceScrolling() { //originally called 'scrollWithInterval()'
         //parse the input into a number, clear interval (for #2 above),
         //and commence with new interval        
-        let px = parseInt(speed.value)/100;
+        let px = parseInt(speed.value) / 100;
         // console.log(px);
         clearInterval(intId);
         incrementScroll(px)();
@@ -94,6 +96,7 @@
         if (scrolling) {
             commenceScrolling();
         }
+        tooltip.innerText = speed.value;
         // console.log('updated speed');
     });
 
@@ -105,10 +108,32 @@
     });
 
     const top = document.getElementById('topBtn');
-    top.addEventListener('click', () =>{
+    top.addEventListener('click', () => {
         clearInterval(intId);
         scrolling = false;
         window.scrollTo(0, 0);
         y = 0;
     });
+
+
+    //the following code is copied from https://developers.google.com/web/updates/2019/12/nic79#wake-lock
+    //the purpose is to keep the screen awake
+
+    // The wake lock sentinel.
+    let wakeLock = null;
+
+    // Function that attempts to request a wake lock.
+    const requestWakeLock = async () => {
+        try {
+            wakeLock = await navigator.wakeLock.request('screen');
+            wakeLock.addEventListener('release', () => {
+                console.log('Wake Lock was released');
+            });
+            console.log('Wake Lock is active');
+        } catch (err) {
+            console.error(`${err.name}, ${err.message}`);
+        }
+    };
+
+    requestWakeLock();
 }());
