@@ -1,0 +1,31 @@
+[
+    {
+        "songName": "Vezakeini",
+        "artist": "Baruch Levine and Benny Friedman",
+        "src": "chords/vezakeiniBo.txt"
+    },
+
+    {
+        "songName": "Lecha Dodi",
+        "artist": "Baruch Levine",
+        "src": "chords/lechaDodi.txt"
+    },
+
+    {
+        "songName": "Forever One",
+        "artist": "Avraham Fried",
+        "src": "chords/foreverOne.txt"
+    },
+    
+    {
+        "songName": "Seder Ha'avoda",
+        "artist": "Ishay Ribo",
+        "src": "chords/sederHaavoda.txt"
+    },
+
+    {
+        "songName": "Ana Hashem",
+        "artist": "Shlomo Carlebach",
+        "src": "chords/anaHashem.txt"
+    }
+]
