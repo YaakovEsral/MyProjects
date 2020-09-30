@@ -27,5 +27,17 @@
         "songName": "Ana Hashem",
         "artist": "Shlomo Carlebach",
         "src": "chords/anaHashem.txt"
+    },
+
+    {
+        "songName": "Lashuv Habaita",
+        "artist": "Ishay Ribo",
+        "src": "chords/lashuvHabaita.txt"
+    },
+
+    {
+        "songName": "My Dear Rebbe",
+        "artist": "Benny Friedman",
+        "src": "chords/myDearRebbe.txt"
     }
 ]
