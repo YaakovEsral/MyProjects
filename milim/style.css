@@ -1,0 +1,81 @@
+/* colors: 
+1A1E26 - dark blue
+254C4B - light blue
+788D7C - light bluegray
+ABC59D - light greengray
+C0BD9E - light beige
+*/
+
+:root {
+    font-size: 10px;
+    background-color: #ABC59D;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    font-size: 5.4rem;
+    margin-bottom: 1rem;
+    color: #254C4B;
+}
+
+h2 {
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    color: #254C4B;
+}
+
+/* UTILITIES */
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* BUTTON */
+
+.btn {
+    font-size: 2rem;
+    width: 20rem;
+    text-align: center;
+    padding: .5rem 3rem;
+    margin-bottom: 1rem;
+    border: 2px solid #788D7C;
+    text-decoration: none;
+    background-color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(37, 76, 75, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}

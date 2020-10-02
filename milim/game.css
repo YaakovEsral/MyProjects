@@ -1,0 +1,63 @@
+/* HUD */
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-item {
+    text-align: center;
+}
+
+.hud-item p {
+    font-size: 2rem;
+}
+
+#progress-bar {
+    height: 4rem;
+    border: 2px solid #254C4B;
+    margin-top: 1.3rem;
+}
+
+#progress-bar-full{
+    background-color: #254C4B;
+    height: 100%;
+    width: 0;
+}
+
+.choice-container {
+    display: flex;
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+    border: rgba(37, 76, 75, 0.25);
+    background-color: white;
+    min-width: 300px;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(37, 76, 75, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.choice-prefix {
+    background-color: #254C4B;
+    color: white;
+    padding: 1.5rem 2.5rem;
+    text-align: center;
+    border: 1px solid #788D7C; 
+}
+
+.choice-text {
+    padding: 1.5rem 2.5rem;
+    width: 100%;
+}
+
+.correct {
+    background-color: #28a745;
+}
+
+.incorrect {
+    background-color: #dc3545;
+}

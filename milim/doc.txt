@@ -1,0 +1,41 @@
+Milim game
+
+Game to enable a student to learn translations of milim in the gemara.
+
+Main part is a series of questions/prompts which display a word.
+The user will be given a few options and will have to select the correct choice.
+
+Each correct selection will earn points for the game.
+
+At the end, there will be a display showing the user's final score.
+
+Specs:
+Home page to display choices of which level/section to play.
+JSON file/array of the different words with translations ('words').
+Array with possible choices.
+'numOfChoices' variable - how many choices per question
+
+For each question, computer displays a random word from 'words'.
+Populates the screen with the correct choice and the rest of additional choices.
+If user selects correct choice, correct choice turns green and user scores 'point value' points.
+If user selects incorrect, selected choice turns red and correct choice turns green.
+
+Q: How to populate the choices.
+PA: For each question, have a 'currentChoices' object array. Add the translation value
+of the selected word from 'milim'. Add additional choices to the array.
+Each object should have a string 'translation' and a boolean 'correct' that says if it's the
+correct choice or not.
+Shuffle the array or find a way to place the correct answer in a random spot in the array.
+Create new elements for the array. If the 'correct' value is true, give the element a data attribute
+to reflect that. If it is false, same thing.
+
+Additional possible features:
+Study mode - user will be given prompts for the same words. He will be shown the word
+with translation and then be prompted to type in the word himself.
+
+End message - user will be shown a message that reflects how well he scored.
+
+Different point values - user can guess a second or even third time if he gets it wrong
+on the first try. He will fewer points for getting it on the second or third try.
+
+Display correct answer - if user gets it wrong, display the correct answer

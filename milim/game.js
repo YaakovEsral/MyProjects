@@ -1,0 +1,143 @@
+(function () {
+    'use strict';
+
+    let totalQuestions;
+    const numChoices = 4;
+    const pointValue = 10;
+
+    let questionNumber = 0;
+    let score = 0;
+
+    let wordsArray = [];
+    let choicesArray = [];
+    function get(id) {
+        return document.getElementById(id);
+    }
+
+    get('score').innerText = score;
+
+    fetch('milim.json')
+        .then((r) => {
+            if (!r.ok) {
+                throw new Error(`${r.status} ${r.statusText}`);
+            }
+            return r.json();
+        })
+        .then((milim) => {
+            wordsArray = [...milim];
+            choicesArray = [...milim];
+            getWord();
+        })
+        .catch((err) => {
+            console.error(err);
+        });
+
+    function getWord() {
+        if (!wordsArray.length || questionNumber >= totalQuestions) {
+            localStorage.setItem('mostRecentScore', score);
+            return window.location.assign('end.html');
+        }
+
+        totalQuestions = choicesArray.length;
+
+        get('progress-bar-full').style.width = `${(questionNumber / totalQuestions) * 100}%`;
+        questionNumber++;
+        get('questionCounter').innerText = `Question ${questionNumber} / ${totalQuestions}`;
+
+        //clear the question and choices fields
+        get('question').innerText = "";
+        get('choices-container').innerHTML = "";
+
+        
+
+        //get a random word
+        const index = Math.floor(Math.random() * wordsArray.length);
+        get('question').innerText = wordsArray[index].word;
+
+        //get choices and append them to HTML
+        const choices = getChoices(index);
+
+        for (let i = 0; i < numChoices; i++) {
+            get('choices-container').innerHTML +=
+                (`<div class="choice-container" data-correct="${choices[i].correct}">
+                <p class="choice-prefix">${i + 1}</p>
+                <p class="choice-text">${choices[i].translation}</p>
+                </div>`);
+        }
+
+        //remove the current word from the wordsArray
+        wordsArray.splice(index, 1);
+
+
+        //add event listeners to each choice
+        const choiceElems = Array.from(document.getElementsByClassName('choice-container'));
+        let acceptingAnswers = true;
+        choiceElems.forEach(elem => {
+            elem.addEventListener('click', () => {
+                if (!acceptingAnswers) {
+                    return;
+                }
+
+                elem.classList.add(elem.dataset.correct === 'true' ? 'correct' : 'incorrect');
+                if (elem.classList.contains('correct')) {
+                    score += pointValue;
+                    get('score').innerText = score;
+                }
+                acceptingAnswers = false;
+
+                setTimeout(getWord, 1000);
+            });
+        });
+    }
+
+    /*
+    At the end of this function, we should have an array 'selectedChoices' containing numChoices 
+    amount of choices. Each choice is an object with a String translation and a boolean correct.
+
+    First, copy the array of milim. Create a new array that will contain the selection of choices.
+    Loop for duration of numChoices - each time, select a random index from the milimCopy array.
+    Add an object to the selectedChoices array - object will have a String translation and a boolean
+    status of whether it's the correct choice. By default, all choices will be false(incorrect).
+    At the end of each loop, remove the entry that was just used from the milimCopy array, so we
+    don't get any duplicates.
+
+    Next, determine whether the correct answer is in the array of selected choices. If it is, set its
+    boolean status to correct(true). If it's not, add it to a random index in the selected choices array 
+    and set its status to correct(true). (In this case, we are overwriting one of the indexes.)
+    */
+    function getChoices(corrAnswerIndex) {
+        let choicesArrayCopy = [...choicesArray];
+        let selectedChoices = [];
+
+        //get numChoices amount of random choices
+        for (let i = 0; i < numChoices; i++) {
+            const index = Math.floor(Math.random() * choicesArrayCopy.length);
+            selectedChoices.push({ translation: choicesArrayCopy[index].translation, correct: false });
+            choicesArrayCopy.splice(index, 1);
+        }
+
+        //check if the correct answer is one of the generated choices
+        const isCorrIndex = selectedChoices.findIndex((word) => {
+            return word.translation === wordsArray[corrAnswerIndex].translation;
+        });
+
+        if (isCorrIndex > -1) {
+            selectedChoices[isCorrIndex].correct = true;
+        } else {
+            const randomSpot = Math.floor(Math.random() * numChoices);
+            selectedChoices[randomSpot] = { translation: wordsArray[corrAnswerIndex].translation };
+            selectedChoices[randomSpot].correct = true;
+        }
+
+        return selectedChoices;
+    }
+
+    function printArray(array) {
+        console.log('printing array');
+        array.forEach(element => {
+            console.log(element);
+        });
+        console.log('');
+    }
+
+}());
