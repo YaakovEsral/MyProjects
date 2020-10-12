@@ -25,6 +25,10 @@
     width: 0;
 }
 
+#game {
+    width: 75%;
+}
+
 .choice-container {
     display: flex;
     font-size: 1.8rem;

@@ -18,3 +18,9 @@ to start with, let's have a link to a new page 'options' that displays the optio
 of which words to use. we will have two groups, Group 1 and Group 2.
 Each group will have a different JSON file. The JSON files will be stored in a folder
 called 'json'. For now, we will hard code all our files and values.
+
+10/12/20 1:21 PM.
+Goals: 
+1. add fixed width to container so it doesn't change each time. - done!
+2. Refit the progress bar so it reflects the progress properly (e.g. 1/12 should show 1/12)
+3. Points system should be out of 100 points. (100/totalQuestions and Math.round())
