@@ -22,5 +22,12 @@ called 'json'. For now, we will hard code all our files and values.
 10/12/20 1:21 PM.
 Goals: 
 1. add fixed width to container so it doesn't change each time. - done!
-2. Refit the progress bar so it reflects the progress properly (e.g. 1/12 should show 1/12)
-3. Points system should be out of 100 points. (100/totalQuestions and Math.round())
+2. Refit the progress bar so it reflects the progress properly (e.g. 1/12 should show 1/12) - done!
+3. Points system should be out of 100 points. (100/totalQuestions and Math.round()) 
+    1:52 PM:
+    - started, still have bugs at question 7 and on
+    - Math.round is rounding to two decimals for most of it, but stops rounding at Q7
+    - done! instead of rounding the pointValue variable, I decided to just round the score
+    variable itself. we no longer are getting the bug at question 7
+    -also, the score will automatically round up to a whole number at the end and will round
+    down to 100 if it's over 100

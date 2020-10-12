@@ -3,7 +3,7 @@
 
     let totalQuestions;
     const numChoices = 4;
-    let pointValue = 10;
+    let pointValue;
 
     let questionNumber = 0;
     let score = 0;
@@ -43,12 +43,19 @@
 
     function getWord() {
         if (!wordsArray.length || questionNumber >= totalQuestions) {
+            if(score < 100){
+                score = Math.ceil(score);
+            } else if (score > 100){
+                score = 100;
+            }
             localStorage.setItem('mostRecentScore', score);
             return window.location.assign('end.html');
         }
 
         totalQuestions = choicesArray.length;
-        // pointValue = Math.round(100 / totalQuestions);
+
+        //the points should always be out of 100. The actual score is rounded to the nearest tenth later
+        pointValue = (100 / totalQuestions);
 
         questionNumber++;
         progressBarFull.style.width = `${(questionNumber / totalQuestions) * 100}%`;
@@ -57,8 +64,6 @@
         //clear the question and choices fields
         question.innerText = "";
         choicesContainer.innerHTML = "";
-
-        
 
         //get a random word
         const index = Math.floor(Math.random() * wordsArray.length);
@@ -93,6 +98,7 @@
                 elem.classList.add(elem.dataset.correct === 'true' ? 'correct' : 'incorrect');
                 if (elem.classList.contains('correct')) {
                     score += pointValue;
+                    score = Math.round(score * 10) / 10;
                     scoreDisplay.innerText = score;
                 }
                 acceptingAnswers = false;
