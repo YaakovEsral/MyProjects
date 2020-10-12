@@ -3,20 +3,29 @@
 
     let totalQuestions;
     const numChoices = 4;
-    const pointValue = 10;
+    let pointValue = 10;
 
     let questionNumber = 0;
     let score = 0;
 
     let wordsArray = [];
     let choicesArray = [];
+    
+    const game = get('game');
+    const scoreDisplay = get('score');
+    const progressBarFull = get('progress-bar-full');
+    const questionCounter = get('questionCounter');
+    const question = get('question');
+    const choicesContainer = get('choices-container');
+
     function get(id) {
         return document.getElementById(id);
     }
 
-    get('score').innerText = score;
+    scoreDisplay.innerText = score;
 
-    fetch('milim.json')
+    
+    fetch(`${localStorage.getItem('selectedGroup') || ''}`)
         .then((r) => {
             if (!r.ok) {
                 throw new Error(`${r.status} ${r.statusText}`);
@@ -39,31 +48,34 @@
         }
 
         totalQuestions = choicesArray.length;
+        // pointValue = Math.round(100 / totalQuestions);
 
-        get('progress-bar-full').style.width = `${(questionNumber / totalQuestions) * 100}%`;
+        progressBarFull.style.width = `${(questionNumber / totalQuestions) * 100}%`;
         questionNumber++;
-        get('questionCounter').innerText = `Question ${questionNumber} / ${totalQuestions}`;
+        questionCounter.innerText = `Question ${questionNumber} / ${totalQuestions}`;
 
         //clear the question and choices fields
-        get('question').innerText = "";
-        get('choices-container').innerHTML = "";
+        question.innerText = "";
+        choicesContainer.innerHTML = "";
 
         
 
         //get a random word
         const index = Math.floor(Math.random() * wordsArray.length);
-        get('question').innerText = wordsArray[index].word;
+        question.innerText = wordsArray[index].word;
 
         //get choices and append them to HTML
         const choices = getChoices(index);
 
         for (let i = 0; i < numChoices; i++) {
-            get('choices-container').innerHTML +=
+            choicesContainer.innerHTML +=
                 (`<div class="choice-container" data-correct="${choices[i].correct}">
                 <p class="choice-prefix">${i + 1}</p>
                 <p class="choice-text">${choices[i].translation}</p>
                 </div>`);
         }
+
+        game.classList.remove('hidden');
 
         //remove the current word from the wordsArray
         wordsArray.splice(index, 1);
@@ -81,7 +93,7 @@
                 elem.classList.add(elem.dataset.correct === 'true' ? 'correct' : 'incorrect');
                 if (elem.classList.contains('correct')) {
                     score += pointValue;
-                    get('score').innerText = score;
+                    scoreDisplay.innerText = score;
                 }
                 acceptingAnswers = false;
 
@@ -132,12 +144,12 @@
         return selectedChoices;
     }
 
-    function printArray(array) {
-        console.log('printing array');
-        array.forEach(element => {
-            console.log(element);
-        });
-        console.log('');
-    }
+    // function printArray(array) {
+    //     console.log('printing array');
+    //     array.forEach(element => {
+    //         console.log(element);
+    //     });
+    //     console.log('');
+    // }
 
 }());

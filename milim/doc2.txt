@@ -1,0 +1,20 @@
+Options on the home page.
+Q: what is the best approach for displaying multiple options on the home page?
+
+first, let's clarify what exactly we want. Here are the options:
+Which words to be tested on
+How many choices per question (easy, medium, difficult, etc.)
+How many total questions
+
+Perhaps we would consider having a settings tab. There, the user could modify the settings,
+but there would be defaults. E.g. default 6 choices (medium) and 10 questions.
+The user would still select which words to be tested on.
+
+In which words, we could simply give each group a name, e.g. B"K Gm' 2a.
+Or we could also have an option to click on the category and display the words
+in the group (with translations).
+
+to start with, let's have a link to a new page 'options' that displays the options
+of which words to use. we will have two groups, Group 1 and Group 2.
+Each group will have a different JSON file. The JSON files will be stored in a folder
+called 'json'. For now, we will hard code all our files and values.

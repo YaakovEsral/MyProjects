@@ -61,3 +61,7 @@
 .incorrect {
     background-color: #dc3545;
 }
+
+.hidden {
+    display: none;
+}
