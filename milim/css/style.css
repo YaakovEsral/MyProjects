@@ -32,6 +32,14 @@ h2 {
     color: #254C4B;
 }
 
+h3 {
+    font-size: 3.6rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
 /* UTILITIES */
 
 .container {
@@ -52,6 +60,12 @@ h2 {
 .justify-center {
     display: flex;
     justify-content: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* BUTTON */

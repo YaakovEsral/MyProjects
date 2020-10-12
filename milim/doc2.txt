@@ -31,3 +31,12 @@ Goals:
     variable itself. we no longer are getting the bug at question 7
     -also, the score will automatically round up to a whole number at the end and will round
     down to 100 if it's over 100
+
+3:39 PM.
+Goals:
+1. Save each word the user gets wrong into array 'studyWords'. - done!
+2. At the end of the game, set item studyWords to equal the studyWords (stringified) array. - done!
+3. If the array is not empty, display the (parsed) array on the end page.
+    -so far, I have succeeded in displaying the div when there are study words. it only remains to
+    populate the div with the actual study words.
+    -done!

@@ -4,13 +4,14 @@
     let totalQuestions;
     const numChoices = 4;
     let pointValue;
+    let studyWords = [];
 
     let questionNumber = 0;
     let score = 0;
 
     let wordsArray = [];
     let choicesArray = [];
-    
+
     const game = get('game');
     const scoreDisplay = get('score');
     const progressBarFull = get('progress-bar-full');
@@ -24,7 +25,7 @@
 
     scoreDisplay.innerText = score;
 
-    
+
     fetch(`${localStorage.getItem('selectedGroup') || ''}`)
         .then((r) => {
             if (!r.ok) {
@@ -43,12 +44,13 @@
 
     function getWord() {
         if (!wordsArray.length || questionNumber >= totalQuestions) {
-            if(score < 100){
+            if (score < 100) {
                 score = Math.ceil(score);
-            } else if (score > 100){
+            } else if (score > 100) {
                 score = 100;
             }
             localStorage.setItem('mostRecentScore', score);
+            localStorage.setItem('studyWords', JSON.stringify(studyWords));
             return window.location.assign('end.html');
         }
 
@@ -82,9 +84,6 @@
 
         game.classList.remove('hidden');
 
-        //remove the current word from the wordsArray
-        wordsArray.splice(index, 1);
-
 
         //add event listeners to each choice
         const choiceElems = Array.from(document.getElementsByClassName('choice-container'));
@@ -100,12 +99,19 @@
                     score += pointValue;
                     score = Math.round(score * 10) / 10;
                     scoreDisplay.innerText = score;
+                } else {
+                    studyWords.push(wordsArray[index]);
                 }
+
+                //remove the current word from the wordsArray
+                wordsArray.splice(index, 1);
+
                 acceptingAnswers = false;
 
-                setTimeout(getWord, 1000);
+                setTimeout(getWord, 10);
             });
         });
+
     }
 
     /*
