@@ -50,8 +50,8 @@
         totalQuestions = choicesArray.length;
         // pointValue = Math.round(100 / totalQuestions);
 
-        progressBarFull.style.width = `${(questionNumber / totalQuestions) * 100}%`;
         questionNumber++;
+        progressBarFull.style.width = `${(questionNumber / totalQuestions) * 100}%`;
         questionCounter.innerText = `Question ${questionNumber} / ${totalQuestions}`;
 
         //clear the question and choices fields
