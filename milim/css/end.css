@@ -1,3 +1,28 @@
+* {
+    color: #254C4B;
+}
+
+#youScored {
+    margin-bottom: 0;
+}
+
+#studyWordsSection {
+    margin-bottom: .9rem;
+}
+
+#studyWords {
+    height: 14rem;
+    width: 100%;
+    overflow-y: auto;
+    border: .3rem solid #254C4B;
+    padding-left: .4rem;
+    background-color: white;
+}
+
+#studyWords p {
+    margin: .2rem .5rem .2rem 0;
+}
+
 .hidden {
     display: none;
 }

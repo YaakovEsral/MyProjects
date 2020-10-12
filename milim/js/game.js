@@ -108,7 +108,7 @@
 
                 acceptingAnswers = false;
 
-                setTimeout(getWord, 10);
+                setTimeout(getWord, 1000);
             });
         });
 

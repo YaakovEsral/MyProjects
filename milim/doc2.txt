@@ -40,3 +40,15 @@ Goals:
     -so far, I have succeeded in displaying the div when there are study words. it only remains to
     populate the div with the actual study words.
     -done!
+
+5:41 PM.
+Goal: Style the studyWordsDiv on the end page.
+1. Change the font color to the regular one. - done!
+2. Add some bottom margin. - done!
+3. Align left. - done!
+4. Give a fixed height and set overflow-y to auto. - done!
+
+Did some bonus stuff also:
+Added border, margin, padding, and background color to studyWords.
+Removed h2 margin-bottom on end page.
+Changed fonts to Fjord One.
