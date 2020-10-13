@@ -52,3 +52,5 @@ Did some bonus stuff also:
 Added border, margin, padding, and background color to studyWords.
 Removed h2 margin-bottom on end page.
 Changed fonts to Fjord One.
+
+Great work!!!!

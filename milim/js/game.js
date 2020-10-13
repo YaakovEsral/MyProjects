@@ -60,8 +60,10 @@
         pointValue = (100 / totalQuestions);
 
         questionNumber++;
-        progressBarFull.style.width = `${(questionNumber / totalQuestions) * 100}%`;
-        questionCounter.innerText = `Question ${questionNumber} / ${totalQuestions}`;
+        // fixing width due to Chrome bug - remove '+ 2' and marginLeft once necessary
+        progressBarFull.style.width = `${(questionNumber / totalQuestions) * 100 + 2}%`;
+        progressBarFull.style.marginLeft = '-1px';
+        questionCounter.innerText = `Question ${questionNumber} / ${totalQuestions}`;        
 
         //clear the question and choices fields
         question.innerText = "";
