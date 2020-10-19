@@ -1,22 +1,92 @@
 [
     {
-        "word": "חסר",
-        "translation": "missing (minus)"
+        "word": "קתני",
+        "translation": "He taught"
+    },
+    {
+        "word": "'ג",
+        "translation": "3"
+    },
+    {
+        "word": "אב",
+        "translation": "father"
+    },
+    {
+        "word": "נאמרו",
+        "translation": "were said"
+    },
+    {
+        "word": "שור",
+        "translation": "ox"
+    },
+    {
+        "word": "קרן",
+        "translation": "horn"
+    },
+    {
+        "word": "שן",
+        "translation": "tooth"
+    },
+    {
+        "word": "מנלן",
+        "translation": "from where do we know (lit. from where to us)"
+    },
+    {
+        "word": "כי",
+        "translation": "that / when / because"
+    },
+    {
+        "word": "אין",
+        "translation": "(it is) not"
+    },
+    {
+        "word": "נגיחה",
+        "translation": "goring"
+    },
+    {
+        "word": "אלא",
+        "translation": "except/rather"
+    },
+    {
+        "word": "שנאמר",
+        "translation": "like it is said"
+    },
+    {
+        "word": "עשה",
+        "translation": "he made / he did"
+    },
+    {
+        "word": "בן",
+        "translation": "son / son of"
+    },
+    {
+        "word": "ברזל",
+        "translation": "iron"
     },
 
     {
-        "word": "אחת",
-        "translation": "one"
+        "word": "כה",
+        "translation": "thus"
     },
 
     {
-        "word": "שנא",
-        "translation": "different"
+        "word": "אלה",
+        "translation": "these"
     },
 
     {
-        "word": "סקילה",
-        "translation": "(death by) stoning"
+        "word": "בכור",
+        "translation": "first born"
+    },
+
+    {
+        "word": "הדר",
+        "translation": "beautiful"
+    },
+
+    {
+        "word": "ואומר",
+        "translation": "and it says"
     },
 
     {
@@ -25,22 +95,33 @@
     },
 
     {
-        "word": "בין",
-        "translation": "between"
+        "word": "וכי",
+        "translation": "and if (lit. and when)"
     },
 
     {
-        "word": "נפקא מינה",
-        "translation": "practical difference (lit. it comes out from it)"
+        "word": "תימא",
+        "translation": "you will say"
     },
 
     {
-        "word": "אילו",
-        "translation": "if"
+        "word": "דברי",
+        "translation": "words of"
     },
 
     {
-        "word": "עביד",
-        "translation": "he did"
+        "word": "קבלה",
+        "translation": "reception"
+    },
+
+    {
+        "word": "דברי קבלה",
+        "translation": "words of reception (Nach)"
+    },
+
+    {
+        "word": "ילפינן",
+        "translation": "we can derive (halachos)"
     }
+
 ]

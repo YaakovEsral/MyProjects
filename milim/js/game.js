@@ -44,11 +44,11 @@
 
     function getWord() {
         if (!wordsArray.length || questionNumber >= totalQuestions) {
-            if (score < 100) {
-                score = Math.ceil(score);
-            } else if (score > 100) {
-                score = 100;
-            }
+            // if (score < 100) {
+            //     score = Math.ceil(score);
+            // } else if (score > 100) {
+            //     score = 100;
+            // }
             localStorage.setItem('mostRecentScore', score);
             localStorage.setItem('studyWords', JSON.stringify(studyWords));
             return window.location.assign('end.html');
@@ -99,7 +99,10 @@
                 elem.classList.add(elem.dataset.correct === 'true' ? 'correct' : 'incorrect');
                 if (elem.classList.contains('correct')) {
                     score += pointValue;
-                    score = Math.round(score * 10) / 10;
+                    score = Math.ceil(score * 10) / 10;
+                    if(score > 100){
+                        score = 100;
+                    }
                     scoreDisplay.innerText = score;
                 } else {
                     studyWords.push(wordsArray[index]);
