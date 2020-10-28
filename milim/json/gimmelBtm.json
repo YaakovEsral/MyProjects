@@ -22,6 +22,63 @@
     {
         "word": "לא כתיבי",
         "translation": "they are NOT written"
+    },
+
+    {
+        "word": "הא",
+        "translation": "this"
+    },
+
+    {
+        "word": "לא קשיא",
+        "translation": "is not a difficulty"
+    },
+
+
+    {
+        "word": "רחמנא",
+        "translation": "the Torah (lit. the Merciful One)"
+    },
+
+
+    {
+        "word": "קים להו",
+        "translation": "it is established to them"
+    },
+
+    {
+        "word": "עבדן מיתה",
+        "translation": "they cause (lit. make) death"
+    },
+
+    {
+        "word": "נזיקין עבדי",
+        "translation": "they cause (lit. make) damage"
+    },
+
+    {
+        "word": "לא עבדי",
+        "translation": "they do not cause (lit. make)"
+    },
+
+    {
+        "word": "מיתה לא עבדי",
+        "translation": "they do not cause (lit. make) death"
+    },
+
+    {
+        "word": "סוף סוף",
+        "translation": "in the end (of the matter - lit. end end)"
+    },
+
+    {
+        "word": "אב למיתה",
+        "translation": "an Av in regards to death"
+    },
+
+    {
+        "word": "אב לנזקין",
+        "translation": "an Av in regards to damage"
     }
 
 ]
