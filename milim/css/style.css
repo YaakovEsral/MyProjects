@@ -6,12 +6,32 @@ ABC59D - light greengray
 C0BD9E - light beige
 */
 
+/* 
+current theme colors
+003249 - dark blue
+007ea7 - medium blue
+80ced7 - light blue
+9ad1d4 - pale blue
+ccdbdc - light gray
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Fjord+One&display=swap');
 
 
 :root {
     font-size: 10px;
-    background-color: #ABC59D;
+    /* --bg-color: #ABC59D;
+    --text-color: #333;
+    --main-theme-color: #254C4B;
+    --button-border-color: #788D7C; */
+
+    --bg-color: #9ad1d4;
+    --text-color: #333;
+    --main-theme-color: #003249;
+    --button-border-color: #788D7C;
+
+
+    background-color: var(--bg-color);
 }
 
 * {
@@ -19,20 +39,20 @@ C0BD9E - light beige
     font-family: 'Fjord One', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: var(--text-color);
 }
 
 h1 {
     font-size: 5.4rem;
     margin-bottom: 1rem;
-    color: #254C4B;
+    color: var(--main-theme-color);
 }
 
 h2 {
     font-size: 4.2rem;
     margin-bottom: 4rem;
     text-align: center;
-    color: #254C4B;
+    color: var(--main-theme-color);
 }
 
 h3 {
@@ -79,7 +99,7 @@ p {
     text-align: center;
     padding: .5rem 3rem;
     margin-bottom: 1rem;
-    border: 2px solid #788D7C;
+    border: 2px solid var(--button-border-color);
     text-decoration: none;
     background-color: white;
 }

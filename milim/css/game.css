@@ -19,12 +19,12 @@
 
 #progress-bar {
     height: 4rem;
-    border: .3rem solid #254C4B;
+    border: .3rem solid var(--main-theme-color);
     margin-top: 1.3rem;
 }
 
 #progress-bar-full{
-    background-color: #254C4B;
+    background-color: var(--main-theme-color);
     /* for some reason 100% left extra space */
     height: 102%; 
     width: 0;
@@ -51,7 +51,7 @@
 }
 
 .choice-prefix {
-    background-color: #254C4B;
+    background-color: var(--main-theme-color);
     color: white;
     padding: 1.5rem 2.5rem;
     text-align: center;
