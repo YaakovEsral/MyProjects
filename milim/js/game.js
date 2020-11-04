@@ -63,7 +63,7 @@
         // fixing width due to Chrome bug - remove '+ 2' and marginLeft once necessary
         progressBarFull.style.width = `${(questionNumber / totalQuestions) * 100 + 2}%`;
         progressBarFull.style.marginLeft = '-1px';
-        questionCounter.innerText = `Question ${questionNumber} / ${totalQuestions}`;        
+        questionCounter.innerText = `Question ${questionNumber} / ${totalQuestions}`;
 
         //clear the question and choices fields
         question.innerText = "";
@@ -100,7 +100,7 @@
                 if (elem.classList.contains('correct')) {
                     score += pointValue;
                     score = Math.ceil(score * 10) / 10;
-                    if(score > 100){
+                    if (score > 100) {
                         score = 100;
                     }
                     scoreDisplay.innerText = score;
@@ -137,6 +137,35 @@
     function getChoices(corrAnswerIndex) {
         let choicesArrayCopy = [...choicesArray];
         let selectedChoices = [];
+
+        //if there are choices for this question, use the provided choices
+        if (wordsArray[corrAnswerIndex].choices) {
+            //creating new variable just for convenience
+            const choices = wordsArray[corrAnswerIndex].choices;
+
+            //place the choices at random positions
+            selectedChoices = choices.map(choice => {
+                return { translation: choice, correct: false }
+            });
+            for (let i = 0; i < choices.length; i++) {
+                const index = Math.floor(Math.random() * choices.length);
+
+                const temp = selectedChoices[index];
+                selectedChoices[index] = selectedChoices[i];
+                selectedChoices[i] = temp;
+            }
+
+            // //put the correct answer in a random position
+            const corrAnswerSpot = Math.floor(Math.random() * numChoices);
+            selectedChoices.push(selectedChoices[corrAnswerSpot]);
+            selectedChoices[corrAnswerSpot] = {
+                translation: wordsArray[corrAnswerIndex].translation,
+                correct: true
+            };
+
+            // console.log(selectedChoices);
+            return selectedChoices;
+        }
 
         //get numChoices amount of random choices
         for (let i = 0; i < numChoices; i++) {
