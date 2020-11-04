@@ -145,7 +145,7 @@
 
             //place the choices at random positions
             selectedChoices = choices.map(choice => {
-                return { translation: choice, correct: false }
+                return { translation: choice, correct: false };
             });
             for (let i = 0; i < choices.length; i++) {
                 const index = Math.floor(Math.random() * choices.length);

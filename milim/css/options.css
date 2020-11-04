@@ -1,0 +1,20 @@
+#homeBtn {
+    margin-top: 8rem;
+}
+
+.showWordsBtn {
+    background-image: url('../media/search.png');
+}
+
+
+div#options {
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr; */
+    /* gap: 2rem; */
+    /* grid-auto-flow: dense; */
+    display: flex;
+    width: 50rem;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
