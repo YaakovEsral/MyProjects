@@ -1,0 +1,89 @@
+[
+    {
+        "word": "אם תבעיון",
+        "translation": "if you will request",
+        "choices": [
+            "if you will do teshuva", 
+            "if you will come", 
+            "if you will listen"
+        ]
+    },
+
+    {
+        "word": "מצפוניו ",
+        "translation": "its hidden things",
+        "choices": [
+            "it's lost items", 
+            "its difficulties", 
+            "its exuberance"
+        ]
+    },
+
+    {
+        "word": "מאי משמע ",
+        "translation": "how is it implied",
+        "choices": [
+            "how is it destroyed", 
+            "how is it refuted", 
+            "how is it questioned"
+        ]
+    },
+
+    {
+        "word": "כדמתרגם רב יוסף",
+        "translation": "As Rav Yosef translated",
+        "choices": [
+            "As Rav Yosef explained",
+            "As Rav Yosef questioned",
+            "As Rav Yosef refuted"
+        ]
+    },
+
+    {
+        "word": "אתגלין ",
+        "translation": "They were revealed",
+        "choices": [
+            "They were hidden",
+            "They were destroyed",
+            "They were removed"
+        ]
+    },
+
+    {
+        "word": "מטמרוהי",
+        "translation": "hidden treasures",
+        "choices": [
+            "treasured ornaments",
+            "goblets",
+            "vessels"
+        ]
+    },
+
+    {
+        "word": "אמר לך",
+        "translation": "He would say to you",
+        "choices": [
+            "He would say 'Go'",
+            "He would question you",
+            "He would learn from you"
+        ]
+    },
+
+    {
+        "word": "What are the two opinions as to what מבעה might be?",
+        "translation": "Man and tooth",
+        "choices": [
+            "Tooth and horn",
+            "Horn and tooth",
+            "Horn and foot"
+        ]
+    }
+
+    
+    
+    
+
+
+
+
+]
