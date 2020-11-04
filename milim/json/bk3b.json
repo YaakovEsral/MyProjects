@@ -77,13 +77,47 @@
             "Horn and tooth",
             "Horn and foot"
         ]
+    },
+
+    
+
+    {
+        "word": "מי קתני",
+        "translation": "Did it teach (in the Mishna)?",
+        "choices": [
+            "Who taught (in the Mishna)?",
+            "Did it learn (in the Mishna)?",
+            "Who learned (in the Mishna)?"
+        ]
+    },
+
+    {
+        "word": "לא כמר",
+        "translation": "Not like one Amora",
+        "choices": [
+            "Not like a priest",
+            "Not like was taught",
+            "Not like our Mishna"
+        ]
+    },
+
+    {
+        "word": "Why does the Mishna not imply שן?",
+        "translation": "The verb doesn't connote happening to oneself",
+        "choices": [
+            "The verb doesn't connote causing to another",
+            "The verb doesn't connote performing the action",
+            "The verb doesn't connote acting on behalf of another"
+        ]
+    },
+
+    {
+        "word": "Why does the Mishna not imply אדם?",
+        "translation": "The verb doesn't connote performing the action",
+        "choices": [
+            "The verb doesn't connote causing to another",
+            "The verb doesn't connote happening to oneself",    
+            "The verb doesn't connote acting on behalf of another"
+        ]
     }
-
-    
-    
-    
-
-
-
-
 ]
