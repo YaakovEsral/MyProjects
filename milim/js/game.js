@@ -71,7 +71,7 @@
 
         //get a random word
         const index = Math.floor(Math.random() * wordsArray.length);
-        question.innerText = wordsArray[index].word;
+        question.innerHTML = wordsArray[index].word;
 
         //get choices and append them to HTML
         const choices = getChoices(index);

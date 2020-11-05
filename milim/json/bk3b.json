@@ -3,34 +3,31 @@
         "word": "אם תבעיון",
         "translation": "if you will request",
         "choices": [
-            "if you will do teshuva", 
-            "if you will come", 
+            "if you will do teshuva",
+            "if you will come",
             "if you will listen"
         ]
     },
-
     {
         "word": "מצפוניו ",
         "translation": "its hidden things",
         "choices": [
-            "it's lost items", 
-            "its difficulties", 
+            "it's lost items",
+            "its difficulties",
             "its exuberance"
         ]
     },
-
     {
-        "word": "מאי משמע ",
+        "word": "מאי משמע? - כדמתרגם רב יוסף<br>What does מאי משמע mean in this phrase?",
         "translation": "how is it implied",
         "choices": [
-            "how is it destroyed", 
-            "how is it refuted", 
+            "how is it destroyed",
+            "how is it refuted",
             "how is it questioned"
         ]
     },
-
     {
-        "word": "כדמתרגם רב יוסף",
+        "word": "מאי משמע? - כדמתרגם רב יוסף<br>What does כדמתרגם רב יוסף mean in this phrase?",
         "translation": "As Rav Yosef translated",
         "choices": [
             "As Rav Yosef explained",
@@ -38,7 +35,6 @@
             "As Rav Yosef refuted"
         ]
     },
-
     {
         "word": "אתגלין ",
         "translation": "They were revealed",
@@ -48,7 +44,6 @@
             "They were removed"
         ]
     },
-
     {
         "word": "מטמרוהי",
         "translation": "hidden treasures",
@@ -58,9 +53,8 @@
             "vessels"
         ]
     },
-
     {
-        "word": "אמר לך",
+        "word": "אמר לך מי קתני נבעה<br>What does אמר לך mean in this phrase?",
         "translation": "He would say to you",
         "choices": [
             "He would say 'Go'",
@@ -68,21 +62,17 @@
             "He would learn from you"
         ]
     },
-
     {
-        "word": "What are the two opinions as to what מבעה might be?",
-        "translation": "Man and tooth",
+        "word": "What are the two opinions as to what מבעה is?",
+        "translation": "אדם and שן",
         "choices": [
-            "Tooth and horn",
-            "Horn and tooth",
-            "Horn and foot"
+            "שן and קרן",
+            "קרן and שן",
+            "קרן and רגל"
         ]
     },
-
-    
-
     {
-        "word": "מי קתני",
+        "word": "אמר לך מי קתני נבעה<br>What does מי קתני mean in this phrase?",
         "translation": "Did it teach (in the Mishna)?",
         "choices": [
             "Who taught (in the Mishna)?",
@@ -90,34 +80,94 @@
             "Who learned (in the Mishna)?"
         ]
     },
-
     {
-        "word": "לא כמר",
+        "word": "מכדי קראי לא כמר דייקי <br> What does the term לא כמר mean in this phrase?",
         "translation": "Not like one Amora",
         "choices": [
-            "Not like a priest",
+            "Not a priest",
             "Not like was taught",
             "Not like our Mishna"
         ]
     },
-
     {
         "word": "Why does the Mishna not imply שן?",
-        "translation": "The verb doesn't connote happening to oneself",
+        "translation": "מבעה doesn't connote happening to oneself",
         "choices": [
-            "The verb doesn't connote causing to another",
-            "The verb doesn't connote performing the action",
-            "The verb doesn't connote acting on behalf of another"
+            "מבעה doesn't connote causing to another",
+            "מבעה doesn't connote performing the action",
+            "מבעה doesn't connote acting on behalf of another"
         ]
     },
-
     {
         "word": "Why does the Mishna not imply אדם?",
-        "translation": "The verb doesn't connote performing the action",
+        "translation": "מבעה doesn't connote performing the action",
         "choices": [
-            "The verb doesn't connote causing to another",
-            "The verb doesn't connote happening to oneself",    
-            "The verb doesn't connote acting on behalf of another"
+            "מבעה doesn't connote causing to another",
+            "מבעה doesn't connote happening to oneself",
+            "מבעה doesn't connote acting on behalf of another"
+        ]
+    },
+    {
+        "word": "מר",
+        "translation": "An Amora (lit. master)",
+        "choices": [
+            "bitter",
+            "An Amora (lit. teacher)",
+            "justified"
+        ]
+    },
+    {
+        "word": "מכדי",
+        "translation": "Since",
+        "choices": [
+            "Instead of",
+            "After",
+            "In addition to"
+        ]
+    },
+    {
+        "word": "What does the י in קראי do?",
+        "translation": "Makes the noun plural",
+        "choices": [
+            "Makes the verb past tense",
+            "Makes the verb future tense",
+            "Makes the noun into a verb"
+        ]
+    },
+    {
+        "word": "מכדי קראי לא כמר דייקי <br> What does the term קרא mean in this phrase?",
+        "translation": "A passuk",
+        "choices": [
+            "A \"calling\"",
+            "A logical statement",
+            "A question"
+        ]
+    },
+    {
+        "word": "מכדי קראי לא כמר דייקי <br> What does the term דייקי refer to in this phrase?",
+        "translation": "The psukim cited earlier",
+        "choices": [
+            "The arguments made earlier",
+            "The Amora'im quoted earlier",
+            "The questions raised earlier"
+        ]
+    },
+    {
+        "word": "מכדי קראי לא כמר דייקי <br> How is the term לא דייקי translated in this phrase?",
+        "translation": "Their precision is not in accordance with...",
+        "choices": [
+            "Their statements are not in accordance with...",
+            "Their \"calling\" is not in accordance with...",
+            "Their gematria is not in accordance with..."
+        ]
+    },
+    {
+        "word": "ושמואל מ\"ט לא אמר כרב<br>What is the meaning of מאי טעמא in this phrase?",
+        "translation": "What is the reason?",
+        "choices": [
+            "What is the question?",
+            "What is the answer?",
+            "What is the difficulty?"
         ]
     }
 ]
