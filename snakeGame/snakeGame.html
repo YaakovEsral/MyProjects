@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--img id="snakeHead" src="media/snakehead.png"/-->
+    <!-- <audio id="chomp" src="media/chomp.mp3"></audio> -->
+    <div id="buttonDiv" class="hidden">
+        <button id="playAgain" class="btn1">Play Again</button>
+        <button id="openHighScoreForm" class="btn1">Save High Score</button>
+        <button id="viewHighScores" class="btn1">View High Scores</button>
+        <button id="noThanks" class="btn1">Quit</button>
+    </div>
+
+    <div id="highScoreBox" class="hidden popupBox">
+        <form id="saveScoreForm">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="username">
+            </div>
+            <button id="saveScore" class="btn1" disabled>Save Score</button>
+        </form>
+        <button id="quitSaveScoreForm" class="btn1">Quit</button>
+    </div>
+
+    <div id="highScoreDisplay" class="hidden popupBox">
+        <h2>High Scores</h2>
+        <ol id="highScoresList"></ol>
+        <button id="quitHighScores" class="btn1">Quit</button>
+    </div>
+    <canvas id="theCanvas"></canvas>
+    <script src="app.js"></script>
+</body>
+
+</html>
