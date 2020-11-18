@@ -47,9 +47,15 @@ function get(id) {
 const canvas = get('theCanvas');
 const c = canvas.getContext('2d');
 
-const UNIT = 64;
-const fieldWidth = 14 * UNIT;
-const fieldHeight = 10 * UNIT;
+const heightInUnits = 14;
+const widthInUnits = 10;
+
+//UNIT was originally 60. Text position throughout has been modified to reflect unit
+const UNIT = 60;//window.innerHeight / heightInUnits;
+console.log('window.innerHeight', window.innerHeight);
+console.log('window.innerHeight / heightInUnits', window.innerHeight / heightInUnits);
+const fieldWidth = heightInUnits * UNIT;
+const fieldHeight = widthInUnits * UNIT;
 
 const hudWidth = fieldWidth;
 const hudHeight = 1 * UNIT;
@@ -174,7 +180,7 @@ function repaint() {
 
         if (bonusMessageDisplay) {
             c.fillStyle = 'black';
-            c.font = '50px fantasy';
+            c.font = `${UNIT * 0.83}px fantasy`;
             c.textAlign = 'center';
             c.fillText('QUICK SCORE!', canvas.width / 2, canvas.height / 3.3);
             c.fillText(`BONUS ${SCORE_BONUS} POINTS`, canvas.width / 2, canvas.height / 2.5);
@@ -290,13 +296,15 @@ function drawMainDisplay() {
 
     //hud content
     c.fillStyle = 'darkgreen';
-    c.font = '48px fantasy';
-    c.textAlign = 'left';
-    c.fillText(`The Snake Game`, 50, 50);
+    c.font = `${UNIT * 0.75}px fantasy`;
+    c.textAlign = 'center';
+    // c.fillText(`The Snake Game`, UNIT * 0.78, UNIT * 0.78);
+    c.fillText(`The Snake Game`, hudWidth * 0.25, UNIT * 0.78);
 
     c.fillStyle = 'darkgreen';
-    c.font = '48px fantasy';
-    c.fillText(`Score: ${score}`, hudWidth - 250, 50);
+    c.font = `${UNIT * 0.75}px fantasy`;
+    // c.fillText(`Score: ${score}`, hudWidth - (UNIT * 3.9), UNIT * 0.78);
+    c.fillText(`Score: ${score}`, hudWidth * 0.75, UNIT * 0.78);
 
     //field styling
     c.fillStyle = '#98e262';
@@ -352,7 +360,7 @@ function endGame() {
     wail.muted = false;
     wail.play();
     c.fillStyle = 'black';
-    c.font = 'bold 70px fantasy';
+    c.font = `${UNIT * 1.1}px fantasy`;
     c.textAlign = 'center';
     c.fillText('GAME OVER', canvas.width / 2, canvas.height / 3.3);
     c.fillText(`Final Score: ${score}`, canvas.width / 2, canvas.height / 2.5);
@@ -434,7 +442,7 @@ quitBtn.addEventListener('click', () => {
     c.fillRect(0, hudOffset, fieldWidth, fieldHeight);
 
     c.fillStyle = 'black';
-    c.font = 'bold 70px fantasy';
+    c.font = `${UNIT * 1.1}px fantasy`;
     c.textAlign = 'center';
     c.fillText('BYE BYE', canvas.width / 2, canvas.height / 2.2);
 });
