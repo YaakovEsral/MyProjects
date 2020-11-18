@@ -18,7 +18,7 @@ canvas {
 
 #buttonDiv {
     position: absolute;
-    top: 40%;
+    top: 44%;
     left: 0;
     right: 0;
     /* text-align: center; */
@@ -28,6 +28,7 @@ canvas {
 
 .btn1 {
     color: #FDFDFD;
+    border: transparent;
     border-radius: 5px;
     width: 185px;
     height: 39px;
