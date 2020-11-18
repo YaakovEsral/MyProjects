@@ -50,8 +50,8 @@ const c = canvas.getContext('2d');
 const heightInUnits = 14;
 const widthInUnits = 10;
 
-//UNIT was originally 60. Text position throughout has been modified to reflect unit
-const UNIT = 60;//window.innerHeight / heightInUnits;
+//UNIT was originally 64. Text position throughout has been modified to reflect unit
+const UNIT = 59;//window.innerHeight / heightInUnits;
 console.log('window.innerHeight', window.innerHeight);
 console.log('window.innerHeight / heightInUnits', window.innerHeight / heightInUnits);
 const fieldWidth = heightInUnits * UNIT;
