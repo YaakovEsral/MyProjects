@@ -47,15 +47,16 @@ function get(id) {
 const canvas = get('theCanvas');
 const c = canvas.getContext('2d');
 
-const heightInUnits = 14;
-const widthInUnits = 10;
+const heightInUnits = 10;
+const widthInUnits = 14;
+const hudHeightInUnits = 1;
 
 //UNIT was originally 64. Text position throughout has been modified to reflect unit
-const UNIT = 59;//window.innerHeight / heightInUnits;
+const UNIT = window.innerHeight / (heightInUnits + hudHeightInUnits);
 console.log('window.innerHeight', window.innerHeight);
 console.log('window.innerHeight / heightInUnits', window.innerHeight / heightInUnits);
-const fieldWidth = heightInUnits * UNIT;
-const fieldHeight = widthInUnits * UNIT;
+const fieldWidth = widthInUnits * UNIT;
+const fieldHeight = heightInUnits * UNIT;
 
 const hudWidth = fieldWidth;
 const hudHeight = 1 * UNIT;
